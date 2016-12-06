@@ -1,0 +1,17 @@
+<h1>
+{% if object %}{% comment %}objectがある場合は既存のレコードの編集{% endcomment %}
+    Edit
+{% else %}{% comment %}objectがない場合はレコードの新規作成{% endcomment %}
+    Add
+{% endif %}
+post
+</h1>
+
+
+<form method="post" action=".">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">
+  Submit
+</button>
+</form>
