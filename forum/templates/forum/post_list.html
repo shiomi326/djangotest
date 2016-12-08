@@ -1,0 +1,9 @@
+{% for post in object_list %}
+    <div>
+        <div><small>{{ post.date_created }}</small></div>
+        <div>{{ post.title }}</div>
+        <div>{{ post.body }}</div>
+    </div>
+{% empty %}
+    <div>投稿がまだありません</div>
+{% endfor %}

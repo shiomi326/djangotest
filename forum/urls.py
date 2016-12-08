@@ -5,4 +5,5 @@ from forum import views  # 先ほど作成したビューをインポート。�
 # URLパターンのリストに新しいURLを追加
 urlpatterns = [
     url(r'post/create/$', views.PostCreate.as_view(), name='post_create'),
+    url(r'^$', views.PostList.as_view(), name='post_list'),  # これを追加
 ]
