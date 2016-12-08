@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'forum', # これを追加
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [

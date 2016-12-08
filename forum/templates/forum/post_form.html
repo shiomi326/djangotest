@@ -1,3 +1,6 @@
+{% extends “forum/base.html” %}
+{% load bootstrap3 %}
+{% block content %}
 <h1>
 {% if object %}{% comment %}objectがある場合は既存のレコードの編集{% endcomment %}
     Edit
@@ -10,8 +13,10 @@ post
 
 <form method="post" action=".">
 {% csrf_token %}
-{{ form.as_p }}
-<button type="submit">
-  Submit
-</button>
-</form>
+{% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            {% bootstrap_icon "star" %} Submit
+        </button>
+    {% endbuttons %}
+</form>{% endblock %}

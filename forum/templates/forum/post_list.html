@@ -1,9 +1,14 @@
+{% extends “forum/base.html” %}
+
+{% block content %}
 {% for post in object_list %}
-    <div>
-        <div><small>{{ post.date_created }}</small></div>
-        <div>{{ post.title }}</div>
-        <div>{{ post.body }}</div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div><small>{{ post.date_created }}</small></div>
+            <div>{{ post.title }}</div>
+            <div>{{ post.body }}</div>
+        </div>
     </div>
 {% empty %}
-    <div>投稿がまだありません</div>
-{% endfor %}
+    <div>No posts yet</div>
+{% endfor %}{% endblock %}
